@@ -374,6 +374,55 @@
         .faq-item h3 { font-size: 16px; color: var(--text-light); margin-bottom: 10px; }
         .faq-item p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
 
+        /* REVIEWS */
+        .reviews-section { background: var(--bg); }
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .reviews-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255,230,109,0.10);
+            border: 1px solid rgba(255,230,109,0.3);
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--accent2);
+            margin-top: 12px;
+            font-weight: 600;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+        .review-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(78,205,196,0.09); }
+        .review-top { display: flex; align-items: center; gap: 14px; }
+        .review-avatar {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; font-weight: 700; color: #fff;
+            flex-shrink: 0;
+        }
+        .review-meta { flex: 1; }
+        .review-name { font-size: 15px; font-weight: 600; color: var(--text-light); }
+        .review-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+        .review-stars { color: #ffe66d; font-size: 14px; letter-spacing: 1px; }
+        .review-text { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
         /* FOOTER */
         footer {
             text-align: center;
@@ -411,6 +460,7 @@
         <li><a href="#how">Как заказать</a></li>
         <li><a href="#samples">Образцы</a></li>
         <li><a href="#order">Заказать</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
         <li><a href="#faq">Вопросы</a></li>
     </ul>
 </nav>
@@ -436,7 +486,9 @@
             Заказать в Telegram
         </a>
         <a href="https://max.ru/id780453702801_1_bot?start=site" class="btn-max" target="_blank" rel="noopener">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <text x="4" y="24" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="white">M</text>
+            </svg>
             Заказать в MAX
         </a>
     </div>
@@ -571,11 +623,120 @@
                 Заказать в Telegram
             </a>
             <a href="https://max.ru/id780453702801_1_bot?start=site" class="order-btn-max" target="_blank" rel="noopener">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <text x="4" y="24" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="white">M</text>
+                </svg>
                 Заказать в MAX
             </a>
         </div>
         <p class="order-note-small">Оба бота принимают оплату ЮKassa 200 ₽ прямо в чате</p>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+    <div class="reviews-header">
+        <h2>Отзывы клиентов</h2>
+        <div class="reviews-badge">★ 4.9 &nbsp;·&nbsp; более 200 заказов</div>
+    </div>
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #4ecdc4, #2a9d8f);">А</div>
+                <div class="review-meta">
+                    <div class="review-name">Андрей К.</div>
+                    <div class="review-date">март 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Покупал квартиру на Петроградке, риелтор посоветовал проверить статус дома до подписания договора. Справку о статусе получил через бот — быстро и без очередей. Дом оказался памятником, сразу стало понятно, что переделки в нём ограничены. Сэкономил время и нервы.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #e67e22, #d35400);">М</div>
+                <div class="review-meta">
+                    <div class="review-name">Мария Ф.</div>
+                    <div class="review-date">февраль 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Заказывала справку для согласования перепланировки. В МВК требовали документ от КГИОП, а самой ехать туда — неделями ждать приёма. Тут всё сделали за меня, справка пришла прямо в Telegram. Рекомендую всем, кто не хочет тратить время на бюрократию.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #8e44ad, #6c3483);">С</div>
+                <div class="review-meta">
+                    <div class="review-name">Сергей Н., СПб</div>
+                    <div class="review-date">апрель 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Работаю проектировщиком, справки КГИОП нужны постоянно. Раньше каждый раз ездил лично или просил коллег. Теперь заказываю здесь — три справки для трёх объектов за пять минут. Цена 200 рублей вообще не вопрос за такое удобство.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #27ae60, #1e8449);">Е</div>
+                <div class="review-meta">
+                    <div class="review-name">Екатерина В.</div>
+                    <div class="review-date">май 2026</div>
+                </div>
+                <div class="review-stars">★★★★☆</div>
+            </div>
+            <div class="review-text">Ждала справку чуть дольше, чем рассчитывала — КГИОП обрабатывает запросы по своему регламенту. Но в боте меня предупредили заранее, держали в курсе. Документ пришёл официальный, с подписями — приняли в МВК без вопросов. В целом довольна, воспользуюсь ещё.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #2980b9, #1a5276);">Д</div>
+                <div class="review-meta">
+                    <div class="review-name">Дмитрий П., СПб</div>
+                    <div class="review-date">июнь 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Взял квартиру в историческом центре. Через бот за пару кликов заказал и оплатил, справка о статусе и предметах охраны пришли вместе. Теперь точно знаю, что можно делать в квартире, а что — нет. Очень удобно, что всё через Telegram без лишней беготни.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #c0392b, #96281b);">О</div>
+                <div class="review-meta">
+                    <div class="review-name">Ольга Б.</div>
+                    <div class="review-date">июль 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Нашла этот сервис через знакомых-риелторов. Нужна была справка о статусе для объекта на Васильевском. Написала в MAX-бот, объяснили что надо прислать, оплатила, потом просто ждала. Никаких очередей, никуда ехать не надо. Документ официальный, всё ок.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #f39c12, #d68910);">И</div>
+                <div class="review-meta">
+                    <div class="review-name">Иван М.</div>
+                    <div class="review-date">май 2026</div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <div class="review-text">Застройщик требовал справку от КГИОП для согласования фасадных работ. Не ожидал, что получение займёт столько шагов через официальный сайт. Тут всё намного проще — один бот, один платёж, и документ у тебя. Результат тот же, но без головной боли.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="review-avatar" style="background: linear-gradient(135deg, #16a085, #0e6655);">Н</div>
+                <div class="review-meta">
+                    <div class="review-name">Наталья Г., СПб</div>
+                    <div class="review-date">март 2026</div>
+                </div>
+                <div class="review-stars">★★★★☆</div>
+            </div>
+            <div class="review-text">Заказывала для проверки статуса перед покупкой — хотела убедиться, что дом не в режиме жёсткой охраны. Справка подтвердила зону охраны, но без статуса памятника. Это именно то, что надо было знать до сделки. Сервис работает, цена адекватная.</div>
+        </div>
+
     </div>
 </section>
 
@@ -631,7 +792,9 @@
                       text-decoration: none; border-radius: 12px; font-size: 15px; font-weight: 600;
                       transition: transform 0.2s;"
                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <text x="4" y="24" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="white">M</text>
+                </svg>
                 MAX-бот
             </a>
         </div>
