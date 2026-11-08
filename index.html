@@ -955,5 +955,37 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+<script>
+// Анонимный счётчик (08.11.2026): только событие и откуда пришли, время ставит счётчик.
+// Без cookie, хранилища браузера и номеров посетителей; IP и строку браузера счётчик не пишет.
+(function () {
+    var U = 'https://rinazolotareva.ru/kgiop-count/';
+    var S = 'direct';
+    try {
+        var q = new URLSearchParams(location.search).get('utm_source');
+        if (q) S = q;
+        else if (document.referrer) {
+            var h = new URL(document.referrer).hostname;
+            if (h && h !== location.hostname) S = h;
+        }
+    } catch (e) {}
+    function hit(e) {
+        try {
+            var b = new URLSearchParams({e: e, s: S});
+            // fetch, а не sendBeacon: тот отправил бы cookie хостинга, если они есть
+            fetch(U, {method: 'POST', body: b, mode: 'no-cors', keepalive: true, credentials: 'omit'}).catch(function () {});
+        } catch (x) {}
+    }
+    hit('visit');
+    document.addEventListener('click', function (ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+        if (!a) return;
+        var h = a.getAttribute('href') || '';
+        if (h.indexOf('t.me/kgiop_spravka_bot') >= 0) hit('to_tg');
+        else if (h.indexOf('max.ru/id780453702801_1_bot') >= 0) hit('to_max');
+    }, true);
+})();
+</script>
+
 </body>
 </html>
