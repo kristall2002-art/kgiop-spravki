@@ -410,6 +410,18 @@
         }
         .order-btn-max:hover { transform: scale(1.04); box-shadow: 0 8px 32px rgba(124,58,237,0.4); }
         .order-note-small { margin-top: 20px; font-size: 13px; color: var(--text-muted); }
+        /* Наши каналы: короткие ссылки словами */
+        .channels { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+        .channels a {
+            display: inline-flex; align-items: center; padding: 9px 16px;
+            border-radius: 999px; font-size: 14px; font-weight: 600;
+            text-decoration: none; border: 1.5px solid currentColor; transition: transform 0.2s;
+        }
+        .channels a:hover { transform: scale(1.05); }
+        .channels .ch-tg { color: #2AABEE; }
+        .channels .ch-max { color: #a07bff; }
+        .channels .ch-vk { color: #0077FF; }
+        .channels-title { margin-top: 22px; font-size: 13px; color: var(--text-muted); }
 
         /* FAQ */
         .faq { max-width: 720px; margin: 0 auto; }
@@ -727,6 +739,12 @@
             </a>
         </div>
         <p class="order-note-small">Оба бота принимают оплату ЮKassa (350 ₽) прямо в чате</p>
+        <p class="channels-title">Наши каналы</p>
+        <div class="channels">
+            <a class="ch-tg" href="https://t.me/spravki_kgiop_spb" target="_blank" rel="noopener">Мы в Telegram</a>
+            <a class="ch-max" href="https://max.ru/id780453702801_biz22" target="_blank" rel="noopener">Мы в MAX</a>
+            <a class="ch-vk" href="https://vk.com/club240528163" target="_blank" rel="noopener">Мы во ВКонтакте</a>
+        </div>
     </div>
 </section>
 
@@ -915,6 +933,12 @@
                 ВКонтакте
             </a>
         </div>
+        <p class="channels-title">Наши каналы</p>
+        <div class="channels">
+            <a class="ch-tg" href="https://t.me/spravki_kgiop_spb" target="_blank" rel="noopener">Мы в Telegram</a>
+            <a class="ch-max" href="https://max.ru/id780453702801_biz22" target="_blank" rel="noopener">Мы в MAX</a>
+            <a class="ch-vk" href="https://vk.com/club240528163" target="_blank" rel="noopener">Мы во ВКонтакте</a>
+        </div>
     </div>
 </section>
 
@@ -922,13 +946,16 @@
 <footer>
     <p>Сервис заказа справок КГИОП · Санкт-Петербург</p>
     <p style="margin-top: 6px;">
-        Вопросы: <a href="https://t.me/kgiop_spravka_bot" style="color: #2AABEE; text-decoration: none;">@kgiop_spravka_bot</a>
+        Вопросы: <a href="https://t.me/kgiop_spravka_bot" style="color: #2AABEE; text-decoration: none;">Telegram-бот</a>
         &nbsp;|&nbsp;
-        <a href="https://t.me/spravki_kgiop_spb" style="color: #2AABEE; text-decoration: none;">Telegram-канал</a>
+        <a href="https://max.ru/id780453702801_1_bot" style="color: #9575cd; text-decoration: none;">MAX-бот</a>
+    </p>
+    <p style="margin-top: 6px;">
+        <a href="https://t.me/spravki_kgiop_spb" style="color: #2AABEE; text-decoration: none;">Мы в Telegram</a>
         &nbsp;|&nbsp;
-        <a href="https://max.ru/id780453702801_1_bot" style="color: #9575cd; text-decoration: none;">MAX</a>
+        <a href="https://max.ru/id780453702801_biz22" style="color: #9575cd; text-decoration: none;">Мы в MAX</a>
         &nbsp;|&nbsp;
-        <a href="https://vk.com/club240528163" style="color: #4a86d6; text-decoration: none;">ВКонтакте</a>
+        <a href="https://vk.com/club240528163" style="color: #4a86d6; text-decoration: none;">Мы во ВКонтакте</a>
     </p>
     <p style="margin-top: 8px;">
         <a href="offerta.html" style="color: #2e3440; text-decoration: underline;">Договор-оферта и политика обработки персональных данных</a>
